@@ -1,0 +1,33 @@
+{
+  "name": "sonatra-select2-scroller",
+  "version": "1.0.0",
+  "authors": [
+    "François Pluchino <francois.pluchino@sonatra.com>"
+  ],
+  "description": "The custom scrollbar for desktop browser in Select2",
+  "main": "js/select2-scroller.js",
+  "keywords": [
+    "scroller",
+    "scroll",
+    "bar",
+    "desktop",
+    "select2"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sonatra/sonatra-select2-scroller",
+  "dependencies": {
+    "jquery": ">=2.1.0",
+    "select2": "^4.0.0",
+    "sonatra-jquery-scroller": "latest"
+  },
+  "devDependencies": {
+    "requirejs": "~2",
+    "bootstrap": "3.*",
+    "font-awesome": "4.*"
+  },
+  "ignore": [
+    "examples",
+    "doc",
+    "README.md"
+  ]
+}
