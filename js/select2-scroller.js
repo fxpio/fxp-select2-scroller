@@ -110,8 +110,8 @@
     Select2Scroller.prototype.destroy = function () {
         var select2 = this.$element.data('select2');
 
-        this.$element.off('select2-open.st.select2scroller', onOpen);
-        this.$element.off('select2-closing.st.select2scroller', onClosing);
+        this.$element.off('select2:open.st.select2scroller', onOpen);
+        this.$element.off('select2:close.st.select2scroller', onClosing);
 
         if (null !== this.$wrapper) {
             this.$wrapper.scroller('destroy');
