@@ -68,6 +68,21 @@
         self.$wrapper = null;
     }
 
+    /**
+     * Action on inserted element in results.
+     *
+     * @param {jQuery.Event|Event} event
+     *
+     * @typedef {Select2Scroller} Event.data The select2 scroller instance
+     *
+     * @private
+     */
+    function onOptionInserted(event) {
+        if (null !== event.data.$wrapper) {
+            event.data.$wrapper.scroller('resizeScrollbar');
+        }
+    }
+
     // SELECT2 SCROLLER CLASS DEFINITION
     // =================================
 
@@ -90,6 +105,7 @@
 
         this.$element.on('select2:open.st.select2scroller', null, this, onOpen);
         this.$element.on('select2:close.st.select2scroller', null, this, onClose);
+        this.$element.data('select2').$results.on('DOMNodeInserted.st.select2scroller', null, this, onOptionInserted);
     },
         old;
 
@@ -112,6 +128,7 @@
 
         this.$element.off('select2:open.st.select2scroller', onOpen);
         this.$element.off('select2:close.st.select2scroller', onClose);
+        this.$element.data('select2').$results.off('DOMNodeInserted.st.select2scroller', onOptionInserted);
 
         if (null !== this.$wrapper) {
             this.$wrapper.scroller('destroy');
