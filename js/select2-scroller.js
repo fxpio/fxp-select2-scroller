@@ -48,7 +48,7 @@
     }
 
     /**
-     * Action on closing select2 dropdown.
+     * Action on close select2 dropdown.
      *
      * @param {jQuery.Event|Event} event
      *
@@ -56,7 +56,7 @@
      *
      * @private
      */
-    function onClosing(event) {
+    function onClose(event) {
         var self = event.data,
             select2 = self.$element.data('select2'),
             $dropdown = $(select2.dropdown),
@@ -89,7 +89,7 @@
         this.$wrapper = null;
 
         this.$element.on('select2:open.st.select2scroller', null, this, onOpen);
-        this.$element.on('select2:close.st.select2scroller', null, this, onClosing);
+        this.$element.on('select2:close.st.select2scroller', null, this, onClose);
     },
         old;
 
@@ -111,7 +111,7 @@
         var select2 = this.$element.data('select2');
 
         this.$element.off('select2:open.st.select2scroller', onOpen);
-        this.$element.off('select2:close.st.select2scroller', onClosing);
+        this.$element.off('select2:close.st.select2scroller', onClose);
 
         if (null !== this.$wrapper) {
             this.$wrapper.scroller('destroy');
