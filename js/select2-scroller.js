@@ -45,6 +45,7 @@
 
         $results.addClass(self.options.resultsWrapperClass);
         self.$wrapper = $results.scroller(self.scrollerOptions);
+        self.$element.data('select2').$results.on('DOMNodeInserted.st.select2scroller', null, self, onOptionInserted);
     }
 
     /**
@@ -62,6 +63,7 @@
             $dropdown = $(select2.dropdown),
             $results = $('.select2-results', $dropdown);
 
+        select2.$results.off('DOMNodeInserted.st.select2scroller', onOptionInserted);
         $results.scroller('destroy');
         $results.removeClass(self.options.resultsWrapperClass);
 
@@ -105,7 +107,6 @@
 
         this.$element.on('select2:open.st.select2scroller', null, this, onOpen);
         this.$element.on('select2:close.st.select2scroller', null, this, onClose);
-        this.$element.data('select2').$results.on('DOMNodeInserted.st.select2scroller', null, this, onOptionInserted);
     },
         old;
 
@@ -128,7 +129,6 @@
 
         this.$element.off('select2:open.st.select2scroller', onOpen);
         this.$element.off('select2:close.st.select2scroller', onClose);
-        this.$element.data('select2').$results.off('DOMNodeInserted.st.select2scroller', onOptionInserted);
 
         if (null !== this.$wrapper) {
             this.$wrapper.scroller('destroy');
