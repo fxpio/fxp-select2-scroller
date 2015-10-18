@@ -187,7 +187,7 @@
     // =========================
 
     $(window).on('load', function () {
-        $('[data-select2-scroller="true"]').each(function () {
+        $('[data-select2-jquery-scroller="true"]').each(function () {
             var $this = $(this);
             Plugin.call($this, $this.data());
         });
