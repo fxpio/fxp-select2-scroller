@@ -4,9 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>Basic example - Sonatra Select2 Scroller</title>
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../bower_components/select2/dist/css/select2.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../node_modules/select2/dist/css/select2.css" rel="stylesheet">
     <link href="../css/scroller.css" rel="stylesheet">
     <style>
         body {
@@ -21,7 +21,7 @@
         <label for="form-select" class="col-sm-2 control-label">Select</label>
 
         <div class="col-sm-5">
-            <select id="form-select" class="form-control" data-select2-scroller="true">
+            <select id="form-select" class="form-control" data-select2-jquery-scroller="true">
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
@@ -53,7 +53,7 @@
 
         <div class="col-sm-5">
             <select id="form-select-multi" multiple="multiple" class="form-control"
-                    data-select2-scroller="true" >
+                    data-select2-jquery-scroller="true" >
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
@@ -84,9 +84,9 @@
 <script>
     var require = {
         paths: {
-            'jquery': '../bower_components/jquery/dist/jquery',
-            'select2': '../bower_components/select2/dist/js/select2',
-            'sonatra-jquery-scroller': '../bower_components/sonatra-jquery-scroller/js/scroller',
+            'jquery': '../node_modules/jquery/dist/jquery',
+            'select2': '../node_modules/select2',
+            'sonatra-jquery-scroller': '../node_modules/@sonatra/jquery-scroller/js/scroller',
             'sonatra-select2-scroller': '../js/select2-scroller'
         },
         shim: {
@@ -100,6 +100,6 @@
         }
     };
 </script>
-<script src="../bower_components/requirejs/require.js" async="async"></script>
+<script src="../node_modules/requirejs/require.js" async="async"></script>
 </body>
 </html>
