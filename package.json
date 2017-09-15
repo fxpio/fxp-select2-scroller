@@ -18,7 +18,7 @@
     "url": "https://github.com/sonatra/sonatra-select2-scroller.git"
   },
   "bugs": {
-    "url" : "https://github.com/sonatra/sonatra-select2-scroller/issues"
+    "url": "https://github.com/sonatra/sonatra-select2-scroller/issues"
   },
   "engines": {},
   "main": "js/select2-scroller.js",
