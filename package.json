@@ -1,8 +1,8 @@
 {
-  "name": "@sonatra/select2-scroller",
+  "name": "@fxp/select2-scroller",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "François Pluchino <francois.pluchino@sonatra.com>",
+  "author": "François Pluchino <francois.pluchino@gmail.com>",
   "contributors": [],
   "description": "A custom scrollbar for desktop browser in Select2",
   "keywords": [
@@ -12,18 +12,18 @@
     "desktop",
     "select2"
   ],
-  "homepage": "https://github.com/sonatra/sonatra-select2-scroller",
+  "homepage": "https://github.com/fxpio/fxp-select2-scroller",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonatra/sonatra-select2-scroller.git"
+    "url": "https://github.com/fxpio/fxp-select2-scroller.git"
   },
   "bugs": {
-    "url": "https://github.com/sonatra/sonatra-select2-scroller/issues"
+    "url": "https://github.com/fxpio/fxp-select2-scroller/issues"
   },
   "engines": {},
   "main": "js/select2-scroller.js",
   "dependencies": {
-    "@sonatra/jquery-scroller": "git://github.com/sonatra/sonatra-jquery-scroller.git#master",
+    "@fxp/jquery-scroller": "git://github.com/fxpio/fxp-jquery-scroller.git#master",
     "jquery": "^2.2.0||^3.2.0",
     "select2": "^4.0.0"
   },

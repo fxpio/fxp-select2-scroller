@@ -1,7 +1,7 @@
 /*
- * This file is part of the Sonatra package.
+ * This file is part of the Fxp package.
  *
- * (c) François Pluchino <francois.pluchino@sonatra.com>
+ * (c) François Pluchino <francois.pluchino@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,7 +15,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'select2/dist/js/select2', 'sonatra-jquery-scroller'], factory);
+        define(['jquery', 'select2/dist/js/select2', 'fxp-jquery-scroller'], factory);
     } else {
         // Browser globals
         factory(jQuery);
@@ -45,7 +45,7 @@
 
         $results.addClass(self.options.resultsWrapperClass);
         self.$wrapper = $results.scroller(self.scrollerOptions);
-        self.$element.data('select2').$results.on('DOMNodeInserted.st.select2scroller', null, self, onOptionInserted);
+        self.$element.data('select2').$results.on('DOMNodeInserted.fxp.select2scroller', null, self, onOptionInserted);
     }
 
     /**
@@ -63,7 +63,7 @@
             $dropdown = $(select2.dropdown),
             $results = $('.select2-results', $dropdown);
 
-        select2.$results.off('DOMNodeInserted.st.select2scroller', onOptionInserted);
+        select2.$results.off('DOMNodeInserted.fxp.select2scroller', onOptionInserted);
         $results.scroller('destroy');
         $results.removeClass(self.options.resultsWrapperClass);
 
@@ -105,8 +105,8 @@
         this.$element = $(element);
         this.$wrapper = null;
 
-        this.$element.on('select2:open.st.select2scroller', null, this, onOpen);
-        this.$element.on('select2:close.st.select2scroller', null, this, onClose);
+        this.$element.on('select2:open.fxp.select2scroller', null, this, onOpen);
+        this.$element.on('select2:close.fxp.select2scroller', null, this, onClose);
     },
         old;
 
@@ -127,8 +127,8 @@
     Select2Scroller.prototype.destroy = function () {
         var select2 = this.$element.data('select2');
 
-        this.$element.off('select2:open.st.select2scroller', onOpen);
-        this.$element.off('select2:close.st.select2scroller', onClose);
+        this.$element.off('select2:open.fxp.select2scroller', onOpen);
+        this.$element.off('select2:close.fxp.select2scroller', onClose);
 
         if (null !== this.$wrapper) {
             this.$wrapper.scroller('destroy');

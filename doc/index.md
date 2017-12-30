@@ -8,13 +8,13 @@ This library require:
 
 - jquery
 - select2
-- sonatra-jquery-scroller
+- fxp-jquery-scroller
 
 Installation
 ------------
 
 ```
-npm install @sonatra/select2-scroller --save
+npm install @fxp/select2-scroller --save
 ```
 
 Dev installation

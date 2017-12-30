@@ -1,7 +1,7 @@
-Sonatra Select2 Scroller
-========================
+Fxp Select2 Scroller
+====================
 
-Sonatra Select2 Scroller is a custom scrollbar for desktop browser in Select2.
+Fxp Select2 Scroller is a custom scrollbar for desktop browser in Select2.
 
 Documentation
 -------------
@@ -26,10 +26,10 @@ This javascript component is under the MIT license. See the complete license:
 About
 -----
 
-Sonatra Select2 Scroller is a [sonatra](https://github.com/sonatra) initiative.
-See also the list of [contributors](https://github.com/sonatra/sonatra-select2-scroller/graphs/contributors).
+Fxp Select2 Scroller is a [François Pluchino](https://github.com/francoispluchino) initiative.
+See also the list of [contributors](https://github.com/fxpio/fxp-select2-scroller/graphs/contributors).
 
 Reporting an issue or a feature request
 ---------------------------------------
 
-Issues and feature requests are tracked in the [Github issue tracker](https://github.com/sonatra/sonatra-select2-scroller/issues).
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/fxpio/fxp-select2-scroller/issues).
