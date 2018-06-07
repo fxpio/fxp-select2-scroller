@@ -15,7 +15,7 @@
 
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery', 'select2/dist/js/select2', 'fxp-jquery-scroller'], factory);
+        define(['jquery', 'select2', '@fxp/jquery-scroller'], factory);
     } else {
         // Browser globals
         factory(jQuery);

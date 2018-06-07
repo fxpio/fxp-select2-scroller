@@ -1,15 +1,6 @@
 Getting Started
 ===============
 
-Prerequisites
--------------
-
-This library require:
-
-- jquery
-- select2
-- fxp-jquery-scroller
-
 Installation
 ------------
 
@@ -26,14 +17,10 @@ Dev installation
 npm install
 ```
 
-### Use grunt
+### Use Webpack Encore
 
 ```
-grunt serve
+$ encore dev-server --port 9000
 ```
 
-For ajax example, you must run this command in parallel:
-
-```
-grunt nodemon
-```
+Open the URL `http://localhost:9000/build` in your browser.

@@ -4,10 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>Basic example - Fxp Select2 Scroller</title>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="../node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../node_modules/select2/dist/css/select2.css" rel="stylesheet">
-    <link href="../css/scroller.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
     <style>
         body {
             padding: 20px;
@@ -81,25 +78,6 @@
         </div>
     </div>
 </form>
-<script>
-    var require = {
-        paths: {
-            'jquery': '../node_modules/jquery/dist/jquery',
-            'select2': '../node_modules/select2',
-            'fxp-jquery-scroller': '../node_modules/@fxp/jquery-scroller/js/scroller',
-            'fxp-select2-scroller': '../js/select2-scroller'
-        },
-        shim: {
-            'select2': ['jquery']
-        },
-        deps: ['fxp-select2-scroller'],
-        callback: function () {
-            $('#form-select').select2();
-            $('#form-select-multi').select2();
-            $(window).trigger('load');
-        }
-    };
-</script>
-<script src="../node_modules/requirejs/require.js" async="async"></script>
+<script src="main.js" async="async"></script>
 </body>
 </html>
