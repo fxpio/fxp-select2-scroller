@@ -59,4 +59,4 @@ Select2Scroller.defaultOptions = {
     resultsWrapperClass: 'scroller-wrapper-select2-results'
 };
 
-pluginify('select2Scroller', 'fxp.select2scroller', Select2Scroller, true, '[data-select2-jquery-scroller="true"]');
+pluginify('select2Scroller', 'fxp.select2scroller', Select2Scroller, true, '[data-select2-scroller="true"]');
