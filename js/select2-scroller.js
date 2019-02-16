@@ -9,7 +9,7 @@
 
 import pluginify from '@fxp/jquery-pluginify';
 import BasePlugin from '@fxp/jquery-pluginify/js/plugin';
-import Scroller from '@fxp/jquery-scroller';
+import FxpScroller from '@fxp/jquery-scroller';
 import $ from "jquery";
 import {onClose, onOpen} from "./utils/events";
 import 'select2';
@@ -28,7 +28,7 @@ export default class Select2Scroller extends BasePlugin
     constructor(element, options = {}) {
         super(element, options);
 
-        this.scrollerOptions = $.extend(true, {}, Scroller.defaultOptions, options, {
+        this.scrollerOptions = $.extend(true, {}, FxpScroller.defaultOptions, options, {
             'contentSelector': '.select2-results__options'
         });
         this.$wrapper = null;
